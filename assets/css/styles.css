@@ -4,6 +4,7 @@
 
 :root {
     --primary-color: rgba(30, 191, 193, 1);
+    --header-bg: rgba(16, 55, 92, 1);
 }
 
 html {
@@ -16,10 +17,213 @@ body {
 }
 
 /* ===== Common ===== */
+a {
+    text-decoration: none;
+}
 
-.content {
+.container {
     width: 1170px;
     max-width: calc(100% - 48px);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+}
+
+.btn {
+    --height: 60px;
+    display: inline-block;
+    min-width: 205px;
+    height: var(--height);
+    padding: 0 20px;
+    border-radius: 999px;
+    text-align: center;
+    line-height: var(--height);
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: rgba(46, 128, 206, 1);
+    border: 1px solid rgba(46, 128, 206, 1);
+}
+
+.btn:hover {
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+/* ===== Header ===== */
+
+.header {
+    padding: 30px;
+    min-height: 100vh;
+    background-color: var(--header-bg);
+}
+
+.logo {
+    display: inline-flex;
+    position: relative;
+    font-size: 1rem;
+}
+
+.logo .logo__circle::before {
+    width: 3em;
+    height: 3em;
+    background-color: rgba(46, 128, 206, 1);
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.logo .logo__circle::after {
+    position: absolute;
+    top: 1.1em;
+    left: 1.1em;
+    width: 1.6em;
+    height: 1.6em;
+    background-color: #fff;
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.logo .logo__text {
+    margin-left: 0.6em;
+    color: #fff;
+    text-align: right;
+    line-height: 1.6em;
+}
+
+.logo .logo__text .logo__brand {
+    display: block;
+    font-size: 1.8em;
+    font-weight: 400;
+}
+
+.logo .logo__text .logo__brand--small {
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: 0em;
+}
+
+/* ===== Header top ===== */
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-top .navbar .navbar__list {
+    display: flex;
+}
+
+.header-action__login,
+.header-top .navbar .navbar__link {
+    color: rgba(201, 210, 218, 1);
+    padding: 8px 21px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.header-action__login:hover,
+.header-top .navbar .navbar__link:hover,
+.navbar__item--active {
+    text-shadow: 1px 0 0 #fff;
+    /* text-shadow: 0.5px 0 0.01px currentColor, 0.5px 0 0.01px currentColor; */
+}
+
+.navbar__item--active::before {
+    position: relative;
+    left: -8px;
+    top: -3px;
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.header-action {
+    display: flex;
+    align-items: center;
+}
+
+.header-top .header-action__signup {
+    margin-left: 7px;
+    --height: 44px;
+    min-width: 104px;
+}
+
+/* ===== Hero Content =====*/
+
+.hero {
+    margin-top: 76px;
+    display: flex;
+    align-items: center;
+}
+
+.hero__content {
+    width: 44%;
+    flex-shrink: 0;
+}
+
+.hero__media {
+    flex-grow: 1;
+}
+
+.hero__content .hero__heading {
+    font-size: 7rem;
+    font-weight: 600;
+    line-height: 80px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+}
+
+.hero__content .hero__desc {
+    margin-top: 22px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: left;
+    color: rgba(201, 210, 218, 1);
+}
+
+.hero__content .hero__row {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.hero__content .hero__row .hero__phone {
+    margin-left: 38px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* ===== Hero Media =====*/
+
+.hero__images {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hero__images .hero__img {
+    width: 300px;
+    height: 540px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.hero__images .hero__img:first-child {
+    position: relative;
+    margin-right: -6px;
+}
+
+.hero__images .hero__img:last-child {
+    width: 210px;
+    height: 410px;
 }
