@@ -48,6 +48,29 @@ a {
     cursor: pointer;
 }
 
+.section-heading {
+    color: #10375c;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.section-desc {
+    margin-top: 18px;
+    color: #575f66;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.67;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* ===== Header ===== */
 
 .header {
@@ -226,4 +249,90 @@ a {
 .hero__images .hero__img:last-child {
     width: 210px;
     height: 410px;
+}
+
+/* ===== Services =====*/
+
+.services {
+    padding: 170px;
+}
+
+.service__heading,
+.service__desc {
+    text-align: center;
+}
+
+.service__desc {
+    max-width: 468px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service__row {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service__row .service__img {
+    width: 570px;
+    height: 570px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* === Service item === */
+
+.service-item {
+    display: flex;
+    width: 470px;
+    padding: 22px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: 0.25s;
+}
+
+.service__list {
+    margin-bottom: 55px;
+}
+
+.service-item:hover {
+    position: relative;
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+}
+
+.service-item:hover .service-item__icon {
+    background-color: rgba(46, 128, 206, 1);
+    color: #fff;
+}
+
+.service-item__icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: rgba(16, 55, 92, 1);
+    background-color: rgba(239, 246, 253, 1);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
+    transition: 0.25s;
+}
+
+.service-item__body {
+    margin-left: 20px;
+}
+
+.service-item__heading {
+    color: #10375c;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.27;
+}
+
+.service-item__desc {
+    margin-top: 8px;
+    color: #575f66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75; /* 175% */
 }
